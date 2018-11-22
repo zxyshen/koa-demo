@@ -2,8 +2,7 @@
   路由的主入口在这个文件夹下，也就是未来的最高级目录下的app.js
 
   一、首先说一下路由和视图层级目录结构(不考虑前端渲染后端渲染)
-  主要就是routes和views；
-
+    主要就是routes和views；
     routers的主要功能
     1.负责分配路由
     2.负责再次抓取数据，比如第一次进入/的时，index截取/后是需要再用
@@ -22,6 +21,7 @@
     各自的子路由(routes/admin)去处理。处理步骤如上。
 
 
+
   二、再来讲讲前端渲染下的目录结构
   当前端渲染下，还选用koa作为服务器的话，目录结构应该是这样子的
   build --- webpack config
@@ -30,11 +30,23 @@
   sql --- 一些sql文件
   src --- 前台目录
   static --- 静态文件(相对于server的)
-  其实比以前的vue项目也就多了一个
+  其实也就比以前的vue项目也就多了一个server文件夹，server文件夹的目录结构是这样子的
+  config --- 服务器的全局配置
+  controller --- 控制器
+  routes --- 路由
+  models --- 模型
+  不需要任何模版，也就是说不需要views并且ctx一律只返回body。即ctx.body = {data}
 
 
 
-
+  三、最后是后端渲染的结构
+  config --- 服务器的全局配置
+  controller --- 控制器
+  routes --- 路由
+  models --- 模型
+  views --- 模版
+  这个就是后端渲染的结构了，至于具体如何用的，继续往后学吧。
+  
 */ 
 
 
